@@ -46,6 +46,9 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="OhR-8h-zx8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="enO-90-oU3">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -66,12 +69,18 @@
                                 <state key="normal" title="Post to Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="postToFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DwA-4n-6yX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJK-gu-BP3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Post to Twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="postToTwitter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cuv-lh-6qX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,6 +187,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="URLTextField" destination="enO-90-oU3" id="1AZ-zO-QCe"/>
+                        <outlet property="opinionTextField" destination="5gN-FA-1FW" id="G8c-qi-VhF"/>
+                        <outlet property="shareImageSwitch" destination="waw-Df-DOi" id="PsA-3z-Vh6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
